@@ -18,13 +18,13 @@
 
 ## A. Presentación
 
-- **Mi nombre o apodo:** [ESCRIBE AQUÍ]
-- **Una actividad que disfruto:** [ESCRIBE AQUÍ]
-- **Algo que me gustaría aprender con Git:** [ESCRIBE AQUÍ]
+- **Mi nombre o apodo:** [Miguel Segovia]
+- **Una actividad que disfruto:** [hacer deporte]
+- **Algo que me gustaría aprender con Git:** [trabajar con un equipo]
 
 ## B. Lo que aprendí
 
-1. **Git sirve para:** [RESPUESTA]
+1. **Git sirve para:** [R]
 2. **Git y GitHub son diferentes porque:** [RESPUESTA]
 3. **Un commit es:** [RESPUESTA]
 4. **El staging area sirve para:** [RESPUESTA]
