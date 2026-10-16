@@ -1,57 +1,41 @@
-# NOTES
-usage: git branch [<options>] [-r | -a] [--merged] [--no-merged] [(--forked <branch>)...]
-   or: git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-point>]
-   or: git branch [<options>] [-l] [<pattern>...]
-   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
-   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
-   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
-   or: git branch [<options>] [-r | -a] [--points-at]
-   or: git branch [<options>] [-r | -a] [--format]
-   or: git branch [<options>] (--delete-merged <pattern>)... [<branch-pattern>...]
+# Notes
+Git status
+Git add
+git add .: Añadir todos los archivos cambiados a staging, incluso archivos nuevos
+git add -u: Añadir solo los archivos cambiados al area de staging
+Git push
+git push por default sube los cambios de nuestro branch al upstream branch, la cual es la branch default para sincronizar cambios
 
-Generic options
-    -v, --[no-]verbose    show hash and subject, give twice for upstream branch
-    -q, --[no-]quiet      suppress informational messages
-    -t, --[no-]track[=(direct|inherit)]
-                          set branch tracking configuration
-    -u, --[no-]set-upstream-to <upstream>
-                          change the upstream info
-    --[no-]unset-upstream unset the upstream info
-    --[no-]color[=<when>] use colored output
-    -r, --remotes         act on remote-tracking branches
-    --contains <commit>   print only branches that contain the commit
-    --no-contains <commit>
-                          print only branches that don't contain the commit
-    --[no-]abbrev[=<n>]   use <n> digits to display object names
+por default tenemos a nuestro remote principal llamado origin
 
-Specific git-branch actions:
-    -a, --all             list both remote-tracking and local branches
-    -d, --[no-]delete     delete fully merged branch
-    -D                    delete branch (even if not merged)
-    -m, --[no-]move       move/rename a branch and its reflog
-    -M                    move/rename a branch, even if target exists
-    --[no-]omit-empty     do not output a newline after empty formatted refs
-    -c, --[no-]copy       copy a branch and its reflog
-    -C                    copy a branch, even if target exists
-    -l, --[no-]list       list branch names
-    --[no-]show-current   show current branch name
-    --[no-]create-reflog  create the branch's reflog
-    --[no-]edit-description
-                          edit the description for the branch
-    --delete-merged <pattern>
-                          delete merged branches whose upstream matches <pattern> (repeatable)
-    --[no-]dry-run        with --delete-merged, only print which branches would be deleted
-    -f, --[no-]force      force creation, move/rename, deletion
-    --merged <commit>     print only branches that are merged
-    --no-merged <commit>  print only branches that are not merged
-    --forked <branch>     print only branches whose upstream matches <branch> (repeatable)
-    --[no-]column[=<style>]
-                          list branches in columns
-    --[no-]sort <key>     field name to sort on
-    --[no-]points-at <object>
-                          print only branches of the object
-    -i, --[no-]ignore-case
-                          sorting and filtering are case insensitive
-    --[no-]recurse-submodules
-                          recurse through submodules
-    --[no-]format <format>
+Subir cambios al remote (server)
+
+git push <remote> <branch>: subir cambios de nuestro branch al server remote
+Glosario
+
+remote: servers a los cuales subir cambios
+origin: server default para subir los cambios
+Si cambiamos la branch upstream, podremos pushear nuestros cambios sin especificar a que rama todo el tiempo
+
+git push -u origin <branch>
+-u es igual que --set-upstream
+
+Ahora nuestra rama local va a seguir a otra rama distinta de main en el remote
+
+Git commit
+Guarda los cambios del staging area
+
+git commit -m "Comentario": hace un commit con un comentario
+git commit -am "Comentario: Nos ahorra tiempo al ser el equivalente de
+git add -u
+git commit -m "Comentario"
+Git branch
+git branch sirve para enlistar o crear nuevas ramas de nuestro repositorio
+
+git branch: Enlistar ramas
+git branch <rama>: Crea una nueva rama
+git branch -D <rama>: Elimina una rama
+git switch
+Git checkout sirve para intercambiar ramas o commits
+
+git switch <rama>: chambiar a una rama
